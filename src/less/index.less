@@ -1,0 +1,15 @@
+.forImg(@num: 1){
+	@name: e(%(".option%d", @num));
+	@url : %("../images/homeicon%d.png", @num);
+	@{name} {
+		background-image: data-uri(@url);
+	}
+}
+.loop(@counter) when (@counter > 0) {
+	.loop((@counter - 1));    // 递归调用自身
+	.forImg(@counter);
+}
+
+div {
+	.loop(5);
+}
