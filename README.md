@@ -1,2 +1,5 @@
-run npm install
-run gulp
+## install
+npm install
+
+## run
+gulp
